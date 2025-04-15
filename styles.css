@@ -1,0 +1,183 @@
+/* General Styles */
+body {
+    background-color: maroon; /* Set background to maroon */
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevents the content from overflowing */
+}
+
+/* Main container to hold the image and kiosk side by side */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 20px; /* Ensures some space from the edges of the screen */
+    gap: 20px; /* Add space between image and the containers */
+    padding: 20px;
+}
+
+/* Kiosk Image Container (Left side) */
+.kiosk-image-container {
+    flex: 2;
+    padding: 10px;
+    max-width: 100%; /* Ensure the container size fits */
+}
+
+/* Image Styling for Proper Scaling */
+.map-image {
+    width: 100%; /* Make the image fill its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    display: block; /* Remove extra space below the image */
+    max-width: 100%; /* Ensure it doesn't exceed container's width */
+}
+
+.pup-kiosk-right-container {
+    flex: 1;
+    padding: 20px;
+}
+
+/* First white container for "PUP Kiosk" heading */
+.pup-kiosk-heading-container {
+    width: 100%;
+    background-color: white;
+    color: #333;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Heading inside the "PUP Kiosk" container */
+.pup-kiosk-heading-container h1 {
+    font-size: 3.5rem; /* Adjusted font size */
+    margin: 0;
+    color: maroon;
+    letter-spacing: 2px;
+}
+
+/* Second white container for Areas list */
+.pup-kiosk-areas-container {
+    width: 100%;
+    background-color: white;
+    color: #333;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Area description section */
+.areas-description {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Individual area columns */
+.area-column {
+    width: 45%;
+    text-align: left;
+    padding-right: 10px;
+}
+
+/* List style for area items */
+.area-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* List Item styling */
+.area-column li {
+    font-size: 0.75rem;
+    margin-bottom: 2.5px;
+    display: flex;
+    align-items: center;
+    line-height: 1.4;
+}
+
+/* Circular Number for areas */
+.area-column li::before {
+    content: attr(data-number);
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background-color: maroon;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    margin-right: 10px;
+    font-size: 11px;
+    font-weight: bold;
+    flex-shrink: 0;
+    align-self: flex-start;
+}
+
+/* Basic styles for hover effect */
+#hover-container {
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 10;
+    max-width: 200px;
+    text-align: center;
+    pointer-events: none; /* Prevents the hover box from blocking interaction with other elements */
+}
+
+#hover-img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#hover-text h3 {
+    font-size: 16px;
+    margin: 0;
+    color: #333;
+}
+
+#hover-text p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center; /* Center vertically */
+    }
+
+    .kiosk-image-container {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .pup-kiosk-right-container {
+        width: 100%;
+    }
+
+    .area-column {
+        min-width: 100%;
+    }
+}

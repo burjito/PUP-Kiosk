@@ -1,8 +1,5 @@
 # PUP-Kiosk
-
-# 🏫 PUP Campus Kiosk Map
-
-An interactive web-based campus map designed for Polytechnic University of the Philippines (PUP). When a user hovers over specific locations on the map, a card appears showing the location name and a brief description — making campus navigation easier and more intuitive.
+An interactive web-based campus map designed for Polytechnic University of the Philippines (PUP). Hovering over specific locations reveals a popup card with the image, name, and brief description of each area.
 
 ## 🚀 Features
 
